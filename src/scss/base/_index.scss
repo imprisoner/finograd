@@ -1,0 +1,14 @@
+@import "fonts";
+@import "typo";
+
+.container {
+  max-width: 1440px;
+  width: calc(100% - 240px);
+  margin: 0 auto;
+  
+  @each $breakpoint, $width in $container-width {
+    @include max-width($breakpoint) {
+      width: $width;
+    }
+  }
+}

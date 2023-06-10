@@ -1,0 +1,44 @@
+.header {
+  height: $header-height;
+
+  @include max-width(mobile) {
+    $header-height: 76px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 94px;
+
+    @include max-width(tablet) {
+      justify-content: space-between;
+    }
+  }
+  
+  &__logo {
+    display: flex;
+    width: 140px;
+    height: 24px;
+  }
+  
+  &__nav {
+    margin-right: auto;
+    line-height: normal;
+    display: flex;
+    gap: 40px;
+
+    @include max-width(tablet) {
+      margin-right: unset;
+    }
+
+    @include max-width(mobile) {
+      display: none;
+    }
+  }
+
+  &__cta {
+    @include max-width(tablet) {
+      display: none;
+    }
+  }
+}

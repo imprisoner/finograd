@@ -1,0 +1,45 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  border: 1px solid;
+  border-radius: 14px;
+  background-color: transparent;
+  transition: all .3s ease;
+  height: 56px;
+  padding: 0 25px;
+  cursor: pointer;
+
+  text-transform: uppercase;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+
+
+  &--white {
+    color: $grey-10;
+    border-color: $grey-10;
+
+    &:hover {
+      color: $purple-40;
+      background-color: $grey-10;
+    }
+  }
+
+  &--purple {
+    color: $purple-10;
+    border-color: $purple-10;
+    &:hover {
+      color: $grey-10;
+      background-color: $purple-10;
+    }
+  }
+
+
+  &__icon {
+    display: flex;
+  }
+}

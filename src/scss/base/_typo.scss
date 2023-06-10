@@ -1,0 +1,55 @@
+.heading {
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  color: $grey-10;
+  
+  &--section {
+    font-size: 48px;
+
+    @include max-width(tablet) {
+      font-size: 32px;
+      line-height: normal;
+    }
+  }
+
+  &--3 {
+    font-size: 32px;
+
+    @include max-width(tablet) {
+      font-size: 24px;
+      line-height: 110%;
+    }
+  }
+
+  &--4 {
+    font-size: 24px;
+  }
+
+  &--5 {
+    font-size: 22px;
+  }
+}
+
+.text {
+  font-weight: 500;
+  line-height: 150%;
+  color: $grey-10;
+
+  &--muted {
+    color: $grey-20;
+  }
+
+  &--14 {
+    font-size: 14px;
+  }
+
+  &--16 {
+    font-size: 16px;
+  }
+
+  &--20 {
+    font-size: 20px;
+  }
+
+}

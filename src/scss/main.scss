@@ -1,0 +1,15 @@
+/// main scss file, all imports goes here
+
+@import 'abstracts';
+@import 'vendor';
+@import 'base';
+@import 'components';
+@import 'blocks';
+@import 'sections';
+@import 'layouts';
+@import 'pages';
+
+body {
+  background-color: $purple-40;
+  font-family: 'Neue Machina';
+}
