@@ -6,19 +6,21 @@
   border: 1px solid;
   border-radius: 14px;
   background-color: transparent;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   height: 56px;
   padding: 0 25px;
   cursor: pointer;
-
+  width: fit-content;
   text-transform: uppercase;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
 
-
+  @include max-width(tablet) {
+    width: unset;
+  }
   &--white {
     color: $grey-10;
     border-color: $grey-10;
@@ -43,7 +45,6 @@
       background-color: $purple-10;
     }
   }
-
 
   &__icon {
     display: flex;

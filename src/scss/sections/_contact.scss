@@ -1,0 +1,38 @@
+.contact {
+
+  margin-bottom: 164px;
+
+  @include max-width(tablet) {
+    margin-bottom: 265px;
+  }
+
+  &__content {
+    display: flex;
+    margin-bottom: 102px;
+    @include max-width(mobile) {
+      margin-bottom: 64px;
+      flex-direction: column;
+    }
+  }
+
+  &__heading {
+    margin-right: 112px;
+    line-height: normal;
+
+    @include max-width(tablet) {
+      margin-bottom: 55px;
+    }
+    @include max-width(mobile) {
+      margin-right: unset;
+    }
+  }
+
+  &__text {
+    max-width: 670px;
+    font-family: Inter;
+  }
+
+  &__cta {
+    margin-left: auto;
+  }
+}

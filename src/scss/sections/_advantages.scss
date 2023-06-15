@@ -5,6 +5,7 @@
     "advantages-heading advantages-cta"
     "advantages-wall advantages-wall";
   row-gap: 60px;
+  align-items: center;
 
   @include max-width(tablet) {
     grid-template-areas:
@@ -26,6 +27,11 @@
 
   &__cta {
     grid-area: advantages-cta;
+    margin-left: auto;
+
+    @include max-width(tablet) {
+      margin-left: unset;
+    }
   }
 
   &__wall {
@@ -46,8 +52,7 @@
     flex: 1;
     @include max-width(desktop) {
       flex: unset;
-    //   width: 385px;
+      //   width: 385px;
     }
   }
-
 }
