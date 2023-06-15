@@ -32,6 +32,12 @@
   &--purple {
     color: $purple-10;
     border-color: $purple-10;
+
+    @include max-width(tablet) {
+      color: $grey-10;
+      background-color: $purple-10;
+    }
+
     &:hover {
       color: $grey-10;
       background-color: $purple-10;

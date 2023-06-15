@@ -1,0 +1,9 @@
+mixin rej-card({title, text, doubleSpan})
+  div(class={"rejection__card--double-span": doubleSpan}).rej-card&attributes(attributes)
+    span.rej-card__close
+      include /assets/svg/cross.svg
+    div.rej-card__content
+      h4.rej-card__title.heading.heading--4 !{title}
+      if text
+        p.rej-card__text.text.text--20.text--muted= text
+    

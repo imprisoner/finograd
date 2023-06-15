@@ -1,0 +1,27 @@
+include /pug/components/adv-card.pug
+section.advantages.container
+ 
+  h2.advantages__heading.heading.heading--section Преимущества
+  a(href="#").advantages__cta.button.button--purple 
+    | Обратный звонок
+    span.button__icon
+      include /assets/svg/arrow_right_up.svg
+  div.advantages__wall
+    -  
+      const cards = [ {
+        title: "Профессионально",
+        text: "Анализируем ваши документы по финансовому скорингу",
+        image: "adv_1.png"
+      },
+      {
+        title: "Быстро",
+        text: "Формируем персональное предложение",
+        image: "adv_2.png"
+      },
+      {
+        title: "Выгодно",
+        text: "Сопровождаем сделку до получения финансирования",
+        image: "adv_3.png"
+      }]
+    each card in cards
+      +adv-card(card).advantages__card

@@ -1,0 +1,5 @@
+mixin adv-card({title, text, image})
+  article.adv-card&attributes(attributes)
+    h3.heading.heading--3.adv-card__title= title
+    p.text.text--20.text--muted.adv-card__text= text
+    img(src=`/assets/images/${image}`).adv-card__image

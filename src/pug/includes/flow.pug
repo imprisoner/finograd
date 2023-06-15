@@ -1,0 +1,25 @@
+section.flow.container
+  h2.flow__heading.heading.heading--section Процесс работы
+  div.flow__wandering-line.line
+    span.dot.dot__purple
+    span.dot
+    span.dot
+    span.dot
+
+  div.flow__content
+    div.flow__line.line
+    ul.flow__list
+      -
+        const flowItems = [
+          "Изучаем ваш бизнес вместе с вами",
+          "Предлагаем ряд продуктов для привлечения финансирования",
+          "Согласовываем условия получения/привлечения финансирования",
+          "Заключаем договор и получаем аванс за наши услуги",
+          "Подготавливаем полный пакет документов для получения средств",
+          "Сопровождаем заявку до получения денежных средств на ваш расчетный счет",
+          "Мы с вами остаемся хорошими друзьями и вы рекомендуете нас партнёрам :)"
+        ]
+      each item in flowItems
+        li.flow__item
+          h3.flow__title.heading.heading--3= item
+          span.dot.flow__marker

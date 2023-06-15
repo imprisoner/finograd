@@ -1,0 +1,34 @@
+.rejection {
+  margin-bottom: 176px;
+
+  @include max-width(tablet) {
+    margin-bottom: 92px;
+  }
+
+  &__heading {
+    margin-bottom: 72px;
+
+    @include max-width(tablet) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__wall {
+    display: grid;
+    grid-template-columns: 360px 1fr 360px;
+    gap: 32px;
+
+    @include max-width(desktop) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include max-width(mobile) {
+      gap: 12px;
+    }
+  }
+
+  &__card--double-span {
+    grid-column: span 2;
+  }
+}

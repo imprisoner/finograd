@@ -1,0 +1,15 @@
+.dot {
+  transform: translateX(calc(-50% + 2px));
+  background-color: $blue-10;
+  border-radius: 9999px;
+  width: 14px;
+  height: 14px;
+  display: block;
+
+  &__purple {
+    width: 28px;
+    height: 28px;
+    box-shadow: 0px 4px 68px #9a6aff;
+    background-color: $purple-10;
+  }
+}

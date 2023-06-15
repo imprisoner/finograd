@@ -1,0 +1,32 @@
+include /pug/components/rej-card.pug
+section.rejection.container
+  h2.rejection__heading.heading.heading--section 
+    | Мы не будем с вами#[br]
+    | работать, если:
+  div.rejection__wall
+    -
+      const rejections = [
+        {
+          title: "Существование вашего юр. лица менее 6 месяцев",
+          text: ""
+        },
+        {
+          title: "Арбитражные дела",
+          text: "В которых бизнес выступает качестве ответчика, на сумму превышающую сумму прошлогоднего оборота"
+        },
+        {
+          title: "Отметка<br>о недостоверности",
+          text: "О директоре, учредителе или юридическом адресе"
+        },
+        {
+          title: "Судебные исполнительные листы",
+          text: "",
+          doubleSpan: true
+        },
+        {
+          title: "Задолженность<br>перед ФНС",
+          text: ""
+        },
+      ]
+    each item in rejections
+      +rej-card(item).rejection__card
