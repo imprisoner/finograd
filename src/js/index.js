@@ -33,74 +33,84 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
   faqControls.forEach((control) => {
     control.addEventListener("click", () => {
-      const isActive = control.classList.contains("faq__icon--pressed");
+      const item = control.closest("li");
+      const icon = item.querySelector(".faq__icon");
+      const isActive = item.classList.contains("faq__item--active");
       
-      control.classList.remove("faq__icon--pressed");
-      const text = control.closest("li").querySelector(".faq__body");
+      icon.classList.remove("faq__icon--pressed");
+      item.classList.remove("faq__item--active");
+
+      const text = item.querySelector(".faq__body");
+
       setTimeout(() => {
         text.classList.remove("faq__body--expanded");
       });
 
       if (!isActive) {
-        control.classList.add("faq__icon--pressed");
-
-        const text = control.closest("li").querySelector(".faq__body");
+       
+        item.classList.add("faq__item--active");
+        icon.classList.add("faq__icon--pressed")
+        const text = item.querySelector(".faq__body");
 
         setTimeout(() => {
           text.classList.add("faq__body--expanded");
         });
       }
-
     });
   });
 
   // expanding services
 
-  const servicesButton = document.querySelector("[data-js=services_expander]")
-  const expandableServices = document.querySelector(".services__list--expandable")
+  const servicesButton = document.querySelector("[data-js=services_expander]");
+  const expandableServices = document.querySelector(
+    ".services__list--expandable"
+  );
   servicesButton.addEventListener("click", () => {
-    expandableServices.classList.add("services__list--expanded")
-    servicesButton.style.opacity = 0
-  })
+    expandableServices.classList.add("services__list--expanded");
+    servicesButton.style.opacity = 0;
+  });
 
   // popups
 
-  const callbackPopupButtons = document.querySelectorAll("[data-js=callback_popup_trigger]")
-  const messagePopupButtons = document.querySelectorAll("[data-js=message_popup_trigger]")
-  const popupCloseButtons = document.querySelectorAll(".popup__close")
+  const callbackPopupButtons = document.querySelectorAll(
+    "[data-js=callback_popup_trigger]"
+  );
+  const messagePopupButtons = document.querySelectorAll(
+    "[data-js=message_popup_trigger]"
+  );
+  const popupCloseButtons = document.querySelectorAll(".popup__close");
 
-  const popupOverlay = document.querySelector(".overlay")
-  popupOverlay.style.display = "none"
-  popupOverlay.style.opacity = 0
-  document.querySelectorAll(".popup").forEach(popup => {
-    popup.style.display = "none"
-  })
+  const popupOverlay = document.querySelector(".overlay");
+  popupOverlay.style.display = "none";
+  popupOverlay.style.opacity = 0;
+  document.querySelectorAll(".popup").forEach((popup) => {
+    popup.style.display = "none";
+  });
 
-  callbackPopupButtons.forEach(callPopup)
-  messagePopupButtons.forEach(callPopup)
-  popupCloseButtons.forEach(button => {
+  callbackPopupButtons.forEach(callPopup);
+  messagePopupButtons.forEach(callPopup);
+  popupCloseButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      button.closest(".popup").style.display = "none"
-      popupOverlay.style.opacity = 0
+      button.closest(".popup").style.display = "none";
+      popupOverlay.style.opacity = 0;
       setTimeout(() => {
-        popupOverlay.style.display = "none"
-      }, 300)
-      document.body.style.overflow = ""
-    })
-  })
+        popupOverlay.style.display = "none";
+      }, 300);
+      document.body.style.overflow = "";
+    });
+  });
 
   function callPopup(button) {
     button.addEventListener("click", (e) => {
-      const popupType = button.dataset.js.split("_")[0]
-      const popup = document.querySelector("#" + popupType)
-      
-      popup.style.display = ""
-      popupOverlay.style.display = ""
+      const popupType = button.dataset.js.split("_")[0];
+      const popup = document.querySelector("#" + popupType);
+
+      popup.style.display = "";
+      popupOverlay.style.display = "";
       setTimeout(() => {
-        popupOverlay.style.opacity = 1
-      }, 10)
-      document.body.style.overflow = "hidden"
-    })
+        popupOverlay.style.opacity = 1;
+      }, 10);
+      document.body.style.overflow = "hidden";
+    });
   }
 });
-

@@ -37,7 +37,7 @@ section.faq#faq
           each item in faq
             li.faq__item
               div.faq__top
-                h3.faq__title.heading.heading--3= item.title
+                h3(data-js="faq_control").faq__title.heading.heading--3= item.title
                 div(data-js="faq_control").faq__icon
                   include /assets/svg/plus.svg
               div.faq__body

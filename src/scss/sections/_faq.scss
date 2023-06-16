@@ -70,7 +70,7 @@
 
   &__heading {
     margin-bottom: 164px;
-
+    
     @include max-width(tablet) {
       margin-bottom: 72px;
       width: min-content;
@@ -112,6 +112,7 @@
   &__title {
     padding: 24px 0;
     line-height: normal;
+    cursor: pointer;
     @include max-width(tablet) {
       font-size: 16px;
     }
