@@ -46,6 +46,16 @@
     }
   }
 
+  &--square {
+    padding: unset;
+    height: 48px;
+    width: 48px;
+    background-color: $purple-10;
+    color: $grey-10;
+    border-radius: 7px;
+    border: none;
+  }
+
   &__icon {
     display: flex;
   }

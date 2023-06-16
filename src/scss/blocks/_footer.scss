@@ -1,0 +1,88 @@
+.footer {
+  padding-top: 54px;
+  padding-bottom: 24px;
+
+  @include max-width(tablet) {
+    padding-top: 24px;
+    padding-bottom: 48px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 52px;
+    border-bottom: 2px solid $grey-10;
+
+    @include max-width(tablet) {
+      flex-direction: column;
+    }
+  }
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__logo {
+    width: 140px;
+    height: 24px;
+    display: flex;
+  }
+
+  &__messengers {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__menues {
+    display: flex;
+    gap: 64px;
+
+    @include max-width(tablet) {
+      display: grid;
+      grid-template-areas:
+        "company info"
+        "company contacts";
+    }
+  }
+
+  &__menu {
+    &:first-child {
+      grid-area: company;
+    }
+    &:nth-child(2) {
+      grid-area: info;
+    }
+    &:nth-child(2) {
+      grid-area: contacts;
+    }
+  }
+
+  &__bottom {
+    padding-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
+
+    @include max-width(tablet) {
+      text-align: center;
+      padding-top: 47px;
+      row-gap: 32px;
+    }
+  }
+  &__policy, &__agreement, &__copyright {
+    opacity: .6;
+  }
+  &__agreement {
+    margin-left: 172px;
+
+    @include max-width(tablet) {
+      margin-left: unset;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+  }
+}
