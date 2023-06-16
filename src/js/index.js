@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
   // faq expanding text
 
-  // const faqList = document.querySelector(".faq__list");
   const faqControls = document.querySelectorAll("[data-js=faq_control]");
 
   faqControls.forEach((control) => {
@@ -46,7 +45,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
         control.classList.add("faq__icon--pressed");
 
         const text = control.closest("li").querySelector(".faq__body");
-        // text.style.height = "";
 
         setTimeout(() => {
           text.classList.add("faq__body--expanded");
@@ -55,4 +53,15 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
     });
   });
+
+  // expanding services
+
+  const servicesButton = document.querySelector("[data-js=services_expander]")
+  const expandableServices = document.querySelector(".services__list--expandable")
+  servicesButton.addEventListener("click", () => {
+    expandableServices.classList.add("services__list--expanded")
+    servicesButton.style.opacity = 0
+  })
+
+  // menu anchor scroll
 });

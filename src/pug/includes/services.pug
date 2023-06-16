@@ -1,0 +1,53 @@
+section.services.container
+  div.services__top
+   h2.services__heading.heading.heading--section Наши услуги:
+   h3.services__hint.heading.heading--3.text-muted неполный перечень финансовых продуктов*
+  div.services__content
+    ul.services__list.services__list--visible
+      - 
+        const services = {
+          visible: [
+            "Кредит под оборотные средства",
+            "Гранты на расширение производства",
+            "Лизинг на покупку оборудования",
+            "Лизинг на покупку строительной техники",
+            "Коммерческая ипотека",
+            "Проектное финансирование",
+            "Кредит на исполнение контрактов 223/344 ФЗ",
+            "Кредит на исполнение коммерческих контрактов"
+          ],
+          expandable: [
+            "Субсидированный кредит на виды бизнес подходящих под гос поддержку",
+            "Инвестиции на развитие бизнеса с нуля",
+            "Инвестиции на развитие производства",
+            "Инвестиции на создание инновационного продукта",
+            "Инвестиции на создание IT продутка или прочих интеллектуальных ценностей",
+            "Банковские гарантии 223/344 ФЗ",
+            "Банковские гарантии для коммерческих контрактов",
+            "Кредиты, кредитные линии, проектное финансирование, тендерное финансирование",
+            "Банковские гарантии для участия и получения авансов по 44-223 фз или коммерция",
+            "Помощь в открытии банковских счетов",
+            "Консалтинг по построению корректной работы в рамках актуальной банковской дисциплины, исходя из задач клиента",
+            "Подбор надежных и эффективных депозитов",
+            "Факторинг, лизинг, коммерческая ипотека",
+            "Банковское сопровождение по необходимости по запросу клиента"
+          ]
+        }
+      each title in services.visible
+        li.services__item
+          a(href="#")
+            h4.services__title.heading.heading--4= title
+          span.services__icon
+            include /assets/svg/arrow_right_up.svg
+    ul.services__list.services__list--expandable
+      each title in services.expandable
+        li.services__item
+          a(href="#")
+            h4.services__title.heading.heading--4= title
+          span.services__icon
+            include /assets/svg/arrow_right_up.svg
+  div.services__bottom
+    button(type="button" data-js="services_expander").services__button.button.button--white
+      | Смотреть полный список услуг
+      span.button__icon
+        include /assets/svg/arrow_down.svg

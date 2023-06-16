@@ -71,6 +71,10 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    @include max-width(tablet) {
+      gap: 12px;
+    }
   }
 
   &__top {
