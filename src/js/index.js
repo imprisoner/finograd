@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         popupOverlay.style.display = "none";
       }, 300);
       document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
     });
   });
 
@@ -111,6 +112,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         popupOverlay.style.opacity = 1;
       }, 10);
       document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = "16px";
     });
   }
 });
