@@ -4,24 +4,29 @@ footer.footer
       a(href="#").footer__logo
         include /assets/svg/logo.svg
       div.footer__messengers
-        a(href="#").button.button--square
+        a(href="#").square-button
           include /assets/svg/telegram.svg
-        a(href="#").button.button--square
+        a(href="#").square-button
           include /assets/svg/whatsapp.svg
-        a(href="mailto:#").button.button--square
+        a(href="mailto:#").square-button
           include /assets/svg/envelope.svg
     div.footer__menues
       nav.footer__menu.footer-menu
         h6.footer-menu__title.text.text--16 О компании
         ul.footer-menu__list.text.text--14
-          li.footer-menu__item О нас
-          li.footer-menu__item Этапы работы
-          li.footer-menu__item Услуги
+          li.footer-menu__item 
+            a(href="#about") О нас
+          li.footer-menu__item 
+            a(href="#flow") Этапы работы
+          li.footer-menu__item 
+            a(href="#services") Услуги
       nav.footer__menu.footer-menu
         h6.footer-menu__title.text.text--16 Дополнительная информация
         ul.footer-menu__list.text.text--14
-          li.footer-menu__item Партнёры
-          li.footer-menu__item Частые вопросы
+          li.footer-menu__item 
+            a(href="#") Партнёры
+          li.footer-menu__item 
+            a(href="#") Частые вопросы
       div.footer__menu.footer-menu
         h6.footer-menu__title.text.text--16 Связаться
         ul.footer-menu__list.text.text--14
