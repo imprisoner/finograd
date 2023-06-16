@@ -63,5 +63,44 @@ document.addEventListener("DOMContentLoaded", (e) => {
     servicesButton.style.opacity = 0
   })
 
-  // menu anchor scroll
+  // popups
+
+  const callbackPopupButtons = document.querySelectorAll("[data-js=callback_popup_trigger]")
+  const messagePopupButtons = document.querySelectorAll("[data-js=message_popup_trigger]")
+  const popupCloseButtons = document.querySelectorAll(".popup__close")
+
+  const popupOverlay = document.querySelector(".overlay")
+  popupOverlay.style.display = "none"
+  popupOverlay.style.opacity = 0
+  document.querySelectorAll(".popup").forEach(popup => {
+    popup.style.display = "none"
+  })
+
+  callbackPopupButtons.forEach(callPopup)
+  messagePopupButtons.forEach(callPopup)
+  popupCloseButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      button.closest(".popup").style.display = "none"
+      popupOverlay.style.opacity = 0
+      setTimeout(() => {
+        popupOverlay.style.display = "none"
+      }, 300)
+      document.body.style.overflow = ""
+    })
+  })
+
+  function callPopup(button) {
+    button.addEventListener("click", (e) => {
+      const popupType = button.dataset.js.split("_")[0]
+      const popup = document.querySelector("#" + popupType)
+      
+      popup.style.display = ""
+      popupOverlay.style.display = ""
+      setTimeout(() => {
+        popupOverlay.style.opacity = 1
+      }, 10)
+      document.body.style.overflow = "hidden"
+    })
+  }
 });
+

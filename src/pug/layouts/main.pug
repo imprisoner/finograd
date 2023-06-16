@@ -7,6 +7,9 @@ html(lang="en")
         link(rel="stylesheet", href="/css/main.css")
         title Document
     body 
+        div.overlay
+          include /pug/includes/popup-callback.pug
+          include /pug/includes/popup-message.pug
         include _main/header.pug
         block page_content
         include _main/footer.pug

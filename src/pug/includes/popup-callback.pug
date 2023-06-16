@@ -1,0 +1,13 @@
+include /pug/components/textfield.pug
+div(id="callback").popup.popup--callback
+  div.popup__close
+    include /assets/svg/popup_cross.svg
+  div.popup__wrap
+    h4.popup__heading.heading.heading--4 Оставьте заявку
+    p.popup__hint.text.text--16 и мы скоро свяжемся
+    form(action="", method="post").popup__form
+      +textfield("Введите номер телефона").popup__textfield
+      button(type="submit").popup__submit.button.button--purple
+        | Отправить
+        span.button__icon
+          include /assets/svg/arrow_right_up.svg

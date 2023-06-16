@@ -1,0 +1,26 @@
+.textfield {
+  background: $grey-10;
+  border: 1px solid $grey-30;
+  border-radius: 14px;
+  height: 47px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 128%;
+  font-family: Inter;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  outline: none;
+
+  &::placeholder {
+    color: $grey-20;
+  }
+
+  
+  &--textarea {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    min-height: 180px;
+    resize: none;
+  }
+}

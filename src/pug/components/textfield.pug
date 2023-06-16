@@ -1,0 +1,6 @@
+mixin textfield(placeholder, name, isTextarea)
+  if isTextarea
+    textarea(name= name placeholder= placeholder).textfield.textfield--textarea&attributes(attributes)
+  else
+    input(type="text" placeholder= placeholder name= name).textfield&attributes(attributes)
+  
