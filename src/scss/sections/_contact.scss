@@ -1,14 +1,34 @@
 .contact {
 
   margin-bottom: 164px;
+  position: relative;
 
   @include max-width(tablet) {
     margin-bottom: 265px;
   }
 
+  &__lighter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-110%, -85%);
+
+    @include max-width(tablet) {
+      transform: translate(-55%, -15%);
+      width: 252px;
+      height: 548px;
+    }
+  }
+
   &__content {
     display: flex;
     margin-bottom: 102px;
+    padding-left: 35px;
+
+    @include max-width(tablet) {
+      padding-left: unset;
+    }
+
     @include max-width(mobile) {
       margin-bottom: 64px;
       flex-direction: column;

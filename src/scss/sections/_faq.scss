@@ -7,6 +7,7 @@
     padding-bottom: 88px;
   }
 
+
   &__decoration {
     border: 1px solid #332833;
     border-left: none;
@@ -46,6 +47,24 @@
       right: unset;
       bottom: unset;
       transform: translate(-50%, -50%);
+    }
+  }
+
+  &__container {
+    position: relative;
+  }
+  
+  &__lighter {
+    position: absolute;
+    top: 510px;
+    left: 0;
+    transform: translateX(-100%);
+
+    @include max-width(tablet) {
+      width: 144px;
+      height: 144px;
+      top: 0;
+      filter: blur(200px);
     }
   }
 
