@@ -1,0 +1,26 @@
+section.partners
+  h2.partners__heading.heading.heading--section.container Партнёры
+  div.partners__wall
+    -
+      const partners = {
+        forward: [
+          "sberbank.png", "vtb.png", "alpha.png", "rosselkhoz.png", "sovcom.png"
+        ],
+        backward: [
+          "tinkoff.svg", "akbars.png", "uralsib.png", "absolut.png", "sdm.jpg"
+        ]
+      }
+    div(data-js="forward").splide.partners__slider.partners__slider--first
+      .splide__track
+        ul.splide__list
+          each logo in partners.forward
+            li.splide__slide
+              div.partner-label
+                img(src= '/assets/images/partners/' + logo).partner-label__image
+    div(data-js="backward").splide
+      .splide__track
+        ul.splide__list
+          each logo in partners.backward
+            li.splide__slide
+              div.partner-label
+                img(src= '/assets/images/partners/' + logo).partner-label__image

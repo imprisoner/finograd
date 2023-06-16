@@ -1,0 +1,122 @@
+.faq {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 276px;
+
+  @include max-width(tablet) {
+    padding-bottom: 88px;
+  }
+
+  &__decoration {
+    border: 1px solid #332833;
+    border-left: none;
+    position: absolute;
+    top: 268px;
+    right: calc(100% - calc(50% - 600px) - calc(1200px - 996px));
+    bottom: 196px;
+    left: 0;
+
+    // @each $screen, $breakpoint in $breakpoints?
+
+    @include max-width(desktop) {
+      top: 0;
+      right: 0;
+      bottom: unset;
+      left: unset;
+      height: 144px;
+      width: 160px;
+      border-left: 1px solid #332833;
+      border-right: none;
+    }
+    @include max-width(tablet) {
+      height: 93px;
+      width: 100px;
+    }
+  }
+
+  &__dot {
+    position: absolute;
+    top: 268px;
+    right: 0;
+    transform: translateX(50%);
+
+    @include max-width(desktop) {
+      top: 50%;
+      left: 0;
+      right: unset;
+      bottom: unset;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__heading {
+    margin-bottom: 164px;
+
+    @include max-width(tablet) {
+      margin-bottom: 72px;
+      width: min-content;
+      line-height: 31px;
+    }
+  }
+
+  &__inner-wrap {
+    width: 850px;
+    margin-left: auto;
+    @include max-width(tablet) {
+      width: unset;
+    }
+  }
+  
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 68px;
+    padding-right: 20px;
+    border-bottom: 2px solid $grey-30;
+
+    @include max-width(tablet) {
+      gap: 28px;
+    }
+  }
+
+  &__title {
+    padding: 24px 0;
+    line-height: normal;
+    @include max-width(tablet) {
+      font-size: 16px;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    cursor: pointer;
+    transition: all .3s ease;
+    &--pressed {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__body {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.8s ease-in-out;
+    &--expanded {
+      max-height: 400px;
+    }
+  }
+
+  &__text {
+    padding: 16px 0;
+
+    @include max-width(tablet) {
+      font-size: 14px;
+    }
+  }
+}

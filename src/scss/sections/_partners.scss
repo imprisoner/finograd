@@ -1,0 +1,24 @@
+.partners {
+  margin-bottom: 284px;
+
+  @include max-width(tablet) {
+    margin-bottom: 112px;
+  }
+  
+  &__heading {
+    margin-bottom: 64px;
+    @include max-width(tablet) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__slider {
+    &--first {
+      margin-bottom: 24px;
+
+      @include max-width(tablet) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
