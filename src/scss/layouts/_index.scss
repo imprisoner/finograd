@@ -10,8 +10,9 @@
 
 .decor-1 {
   position: relative;
-  height: 4px;
-  background: linear-gradient(rgba(248, 248, 248, 0.22), rgba(255, 255, 255, 0.15));
+
+  // height: 4px;
+  // background: linear-gradient(rgba(248, 248, 248, 0.22), rgba(255, 255, 255, 0.15));
 
   @include min-width(mobile) {
     background: transparent;
@@ -31,10 +32,19 @@
 
   &__wandering-line {
     position: absolute;
-    left: 0;
+    left: 25px;
     top: 0;
     transform: rotate(-90deg) translateX(calc(50% - 4px)) translateY(-16px);
     transform-origin: top;
+    &::after {
+      content: "";
+      background: linear-gradient(rgba(248, 248, 248, 0.22), rgba(255, 255, 255, 0.15));
+      position: absolute;
+      width: 4px;
+      height: 100vw;
+      z-index: -1;
+    }
+
     .dot {
       width: 8px;
       height: 8px;
