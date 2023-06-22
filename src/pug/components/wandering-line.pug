@@ -1,0 +1,5 @@
+mixin wandering-line(dotsNumber)
+  div(class={'wandering-line--horizontal': isHorizontal}).wandering-line&attributes(attributes)
+    span.dot.dot--purple
+    each dot in Array(dotsNumber)
+      span.dot

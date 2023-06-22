@@ -30,3 +30,7 @@
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. " + "Please make sure it is defined in `#{$breakpoints}` map.";
   }
 }
+
+// @mixin lighter-position($top, $right, $bottom, $left, $trX, $trY) {
+
+// }

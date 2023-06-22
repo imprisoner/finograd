@@ -1,0 +1,15 @@
+.wandering-line {
+  display: flex;
+  flex-direction: column;
+  .dot {
+    &:first-child {
+      margin-bottom: 388px;
+    }
+    &:nth-child(2) {
+      margin-bottom: 42px;
+    }
+    &:nth-child(3) {
+      margin-bottom: 244px;
+    }
+  }
+}

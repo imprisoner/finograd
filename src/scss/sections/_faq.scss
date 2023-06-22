@@ -54,19 +54,19 @@
     position: relative;
   }
   
-  &__lighter {
-    position: absolute;
-    top: 510px;
-    left: 0;
-    transform: translateX(-100%);
+  // &__lighter {
+  //   position: absolute;
+  //   top: 510px;
+  //   left: 0;
+  //   transform: translateX(-100%);
 
-    @include max-width(tablet) {
-      width: 144px;
-      height: 144px;
-      top: 0;
-      filter: blur(200px);
-    }
-  }
+  //   @include max-width(tablet) {
+  //     width: 144px;
+  //     height: 144px;
+  //     top: 0;
+  //     filter: blur(200px);
+  //   }
+  // }
 
   &__heading {
     margin-bottom: 164px;

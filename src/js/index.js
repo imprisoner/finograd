@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   popupCloseButtons.forEach((button) => {
     button.addEventListener("click", () => {
       button.closest(".popup").style.display = "none";
-      popupOverlay.style.opacity = 0;
+      popupOverlay.style.opacity = "0";
       setTimeout(() => {
         popupOverlay.style.display = "none";
       }, 300);
@@ -107,9 +107,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
       const popup = document.querySelector("#" + popupType);
 
       popup.style.display = "";
-      popupOverlay.style.display = "";
+      popupOverlay.style.display = "block";
       setTimeout(() => {
-        popupOverlay.style.opacity = 1;
+        popupOverlay.style.opacity = "1";
       }, 10);
       document.body.style.overflow = "hidden";
       document.body.style.paddingRight = "16px";

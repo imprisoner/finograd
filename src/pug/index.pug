@@ -1,16 +1,23 @@
 extends layouts/main.pug
-
+include /pug/components/wandering-line.pug
 block page_content
-  include /pug/includes/about.pug
-  include /pug/includes/audience.pug
-  include /pug/includes/advantages.pug
-  include /pug/includes/flow.pug
-  include /pug/includes/partners.pug
-  include /pug/includes/faq.pug
-  include /pug/includes/rejection.pug
-  //- section(style="overflow: hidden;")
-    div(style="position: relative;").container
-      div.lighter.services__lighter
-  include /pug/includes/services.pug
-  include /pug/includes/contact.pug
+  main.page-content
+    include /pug/includes/about.pug
+    div.decor.decor-1
+      div.lighter.decor-1__lighter
+      +wandering-line(2).decor-1__wandering-line
+    include /pug/includes/audience.pug
+    include /pug/includes/advantages.pug
+    include /pug/includes/flow.pug
+    include /pug/includes/partners.pug
+    div.decor.decor-2
+      div.lighter.decor-2__lighter
+    include /pug/includes/faq.pug
+    include /pug/includes/rejection.pug
+    div.decor.decor-3
+      div.lighter.decor-3__lighter
+    include /pug/includes/services.pug
+    include /pug/includes/contact.pug
+    div.decor.decor-4
+      div.lighter.decor-4__lighter
     
