@@ -31,7 +31,7 @@
 
   &__text {
     line-height: 24px;
-    max-width: 80%;
+    max-width: 85%;
     @include max-width(tablet) {
       line-height: 150%;
     }

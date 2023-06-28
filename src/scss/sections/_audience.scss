@@ -4,6 +4,7 @@
   gap: 52px;
   margin-bottom: 116px;
   position: relative;
+
   @include max-width(tablet) {
     gap: 40px;
     margin-bottom: 148px;
@@ -25,6 +26,7 @@
 
   &__heading {
     display: none;
+
     @include max-width(tablet) {
       display: block;
     }
@@ -42,7 +44,7 @@
 
   &__title {
     flex: 280px 0 0;
-    line-height: normal;
+    line-height: 96.5%;
 
     @include max-width(tablet) {
       flex: unset;
@@ -51,5 +53,9 @@
 
   &__text {
     max-width: 700px;
+  }
+
+  &__list {
+    font-family: Inter;
   }
 }

@@ -68,7 +68,7 @@
     position: relative;
     padding-top: 16px;
     min-height: 100px;
-    border-bottom: 2px solid $grey-30;
+    border-bottom: 2px solid $purple-20;
 
     @include max-width(tablet) {
       min-height: 76px;

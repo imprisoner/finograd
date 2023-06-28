@@ -5,5 +5,5 @@ mixin rej-card({title, text, doubleSpan})
     div.rej-card__content
       h4.rej-card__title.heading.heading--4 !{title}
       if text
-        p.rej-card__text.text.text--20.text--muted= text
+        p.rej-card__text.text.text--20.text--muted !{text}
     
