@@ -11,9 +11,6 @@
 .decor-1 {
   position: relative;
 
-  // height: 4px;
-  // background: linear-gradient(rgba(248, 248, 248, 0.22), rgba(255, 255, 255, 0.15));
-
   @include min-width(mobile) {
     background: transparent;
   }
@@ -21,7 +18,7 @@
   &__lighter {
     position: absolute;
     bottom: 0;
-    transform: translate(-40%, 40%);
+    transform: translate(-63%, 40%);
 
     @include max-width(tablet) {
       width: 790px;
@@ -69,7 +66,7 @@
     height: 638px;
     position: absolute;
     top: 0;
-    transform: translateX(-30%);
+    transform: translate(-42%, 3%);
 
     @include max-width(tablet) {
       width: 144px;
@@ -88,7 +85,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    transform: translate(8%, 8%);
+    transform: translate(-51%, -13%);
 
     @include max-width(tablet) {
       width: 565px;
@@ -99,6 +96,23 @@
 }
 
 .decor-4 {
+  position: relative;
+
+  &__lighter {
+    width: 270px;
+    height: 764px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(69%, 1%);
+    display: none;
+    @include max-width(tablet) {
+      display: block;
+    }
+  }
+}
+
+.decor-5 {
   position: relative;
 
   &__lighter {

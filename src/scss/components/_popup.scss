@@ -3,8 +3,12 @@
   box-shadow: 11px 19px 25px rgba(154, 106, 255, 0.2);
   border-radius: 24px;
   padding: 110px 124px;
-  position: relative;
-  min-width: 890px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 790px;
   text-align: center;
   display: flex;
   align-items: center;

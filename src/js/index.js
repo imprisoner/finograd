@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         popupOverlay.style.opacity = "1";
       }, 10);
       document.body.style.overflow = "hidden";
-      document.body.style.paddingRight = "16px";
+      document.body.style.paddingRight = "24px";
     });
   }
 });
