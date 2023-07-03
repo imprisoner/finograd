@@ -5,10 +5,9 @@
   width: 14px;
   height: 14px;
   display: block;
-  box-shadow: 0px 4px 68px 0px #9A6AFF;
   &--purple {
     width: 28px;
     height: 28px;
-    background-color: $purple-10;
+    background: radial-gradient(50% 50% at 50% 50%, #996AFF 99.99%, rgba(255, 255, 255, 0) 100%);
   }
 }
