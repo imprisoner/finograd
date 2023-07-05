@@ -5,6 +5,12 @@
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: $purple-40;
+  font-family: 'Neue Machina';
+  overflow-x: hidden;
+}
+
 .container {
   max-width: 1440px;
   width: calc(100% - 240px);
