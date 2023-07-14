@@ -19,9 +19,6 @@ export default function pug(done) {
         css: ['dist/css/main.css'],
       })
     )
-    .on('error', (err) => {
-      log.error(err.message);
-    })
     .pipe(dest(GLOBS.PUG.DEST))
   done()
 }
