@@ -12,13 +12,13 @@ export default function pug(done) {
       pretty: true,
       basedir: "src"
     }))
-    // .pipe(
-    //   critical({
-    //     base: 'dist/',
-    //     inline: true,
-    //     css: ['dist/css/main.css'],
-    //   })
-    // )
+    .pipe(
+      critical({
+        base: 'dist/',
+        inline: true,
+        css: ['dist/css/main.css'],
+      })
+    )
     .pipe(dest(GLOBS.PUG.DEST))
   done()
 }

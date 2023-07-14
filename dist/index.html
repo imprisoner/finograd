@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="/assets/fonts/NeueMachina-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/NeueMachina-Medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/NeueMachina-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/Inter-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/Inter-Medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <style>a,body,div,form,h1,h2,h4,header,html,main,nav,p,section,span{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}header,main,nav,section{display:block}*,::after,::before{box-sizing:inherit}html{box-sizing:border-box;touch-action:manipulation;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-ms-overflow-style:scrollbar}body{line-height:1;font-family:sans-serif;text-align:left}a{background-color:transparent;-webkit-text-decoration-skip:objects}svg:not(:root){overflow:hidden}button{border-radius:0}button,input,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}[type=button],[type=submit],button{-webkit-appearance:button}textarea{overflow:auto;resize:vertical}button,input{overflow:visible}button{text-transform:none}[type=button]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}textarea{overflow:auto;resize:vertical}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}button{padding:0;border:0;font:inherit;font-size:100%;color:inherit;text-align:inherit;background:0 0;-webkit-appearance:button;-moz-appearance:button;appearance:button}button:-moz-focusring{outline:0}a{color:inherit;text-decoration:none}a:-moz-focusring{outline:0}@font-face{font-family:"Neue Machina";src:url("/assets/fonts/NeueMachina-Bold.woff") format("woff");font-weight:700;font-display:swap}@font-face{font-family:"Neue Machina";src:url("/assets/fonts/NeueMachina-Medium.woff") format("woff");font-weight:500;font-display:swap}@font-face{font-family:"Neue Machina";src:url("/assets/fonts/NeueMachina-Regular.woff") format("woff");font-weight:400;font-display:swap}@font-face{font-family:Inter;src:url("/assets/fonts/Inter-Bold.woff") format("woff");font-weight:700;font-display:swap}@font-face{font-family:Inter;src:url("/assets/fonts/Inter-Medium.woff") format("woff");font-weight:500;font-display:swap}.heading{font-style:normal;font-weight:700;line-height:150%;color:#fcfcfc}.heading--section{font-size:48px}.heading--4{font-size:24px}.text{font-weight:500;line-height:150%;color:#fcfcfc}.text--muted{color:#9c9c9c}.text--16{font-size:16px}:root{scroll-behavior:smooth}body{background-color:#0c000c;font-family:"Neue Machina";overflow-x:hidden}.container{max-width:1440px;width:calc(100% - 240px);margin:0 auto}.button{display:flex;align-items:center;justify-content:center;gap:17px;border:1px solid;border-radius:14px;background-color:transparent;height:56px;padding:0 25px;width:-moz-fit-content;width:fit-content;text-transform:uppercase;font-family:Inter;font-weight:700;font-size:16px}.button--white{color:#fcfcfc;border-color:#fcfcfc}.button--purple{color:#996aff;border-color:#996aff}.button__icon{display:flex}.dot{transform:translateX(calc(-50% + 2px));background-color:#33ceff;border-radius:9999px;width:14px;height:14px;display:block}.dot--purple{width:28px;height:28px;background:radial-gradient(50% 50% at 50% 50%,#996aff 99.99%,rgba(255,255,255,0) 100%)}.popup{background:#0c000c;box-shadow:11px 19px 25px rgba(154,106,255,.2);border-radius:24px;padding:110px 124px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);min-width:790px;text-align:center;display:flex;align-items:center}.popup__wrap{width:100%}.popup__close{position:absolute;top:32px;right:32px}.popup__heading{margin-bottom:30px}.popup__hint{margin-bottom:40px}.popup__form{display:flex;flex-direction:column;gap:40px}.popup__submit{align-self:flex-end}.overlay{position:fixed;top:0;right:0;bottom:0;left:0;background-color:rgba(46,46,46,.8352941176);display:flex;align-items:center;justify-content:center;z-index:999}.textfield{background:#fcfcfc;border:1px solid #5a5a5a;border-radius:14px;height:47px;font-weight:500;font-size:14px;line-height:128%;font-family:Inter;display:flex;align-items:center;padding:0 15px;outline:0}.textfield::-moz-placeholder{color:#9c9c9c}.textfield--textarea{padding-top:15px;padding-bottom:15px;min-height:180px;resize:none}.lighter{background:radial-gradient(50% 50% at 50% 50%,rgba(51,206,255,.07) 18.02%,rgba(255,255,255,0) 100%);border-radius:100px;width:690px;height:690px}.header{height:100px}.header__container{display:flex;align-items:center;height:100%;gap:94px}.header__logo{display:flex;width:140px;height:24px}.header__nav{margin-right:auto;line-height:normal;display:flex;gap:40px}.header__call{font-family:Inter;font-size:20px;font-weight:700;line-height:24px;color:#fcfcfc;display:flex;flex-direction:row-reverse;align-items:center;gap:17px}.header__icon{display:flex}.footer__menu:first-child{grid-area:company}.footer__menu:nth-child(2){grid-area:info}.footer__menu:last-child{grid-area:contacts}.wandering-line{display:flex;flex-direction:column}.wandering-line .dot:first-child{margin-bottom:388px}.wandering-line .dot:nth-child(2){margin-bottom:42px}.wandering-line .dot:nth-child(3){margin-bottom:244px}.decor-1__lighter{position:absolute;bottom:0;transform:translate(-70%,80%)}.decor-1__wandering-line{position:absolute;left:25px;top:0;transform:rotate(-90deg) translateX(calc(50% - 4px)) translateY(-16px);transform-origin:top}.decor-1__wandering-line::after{content:"";background:linear-gradient(rgba(248,248,248,.22),rgba(255,255,255,.15));position:absolute;width:4px;height:100vw;z-index:-1}.decor-1__wandering-line .dot{width:8px;height:8px}.decor-1__wandering-line .dot:first-child{width:16px;height:16px;margin-bottom:230px}.decor-4__lighter{width:270px;height:764px;position:absolute;top:0;right:0;transform:translate(69%,1%);display:none}.about{padding-top:64px;padding-bottom:200px;background:url(/assets/images/main_bg.png) 130% 0/contain no-repeat;margin-bottom:86px}.about__info{font-family:Inter;font-size:20px;line-height:110%;max-width:460px;margin-bottom:64px}.about__heading{display:flex;flex-direction:column;gap:12px;margin-bottom:96px;line-height:110%}.about__heading-part{color:#996aff}.about__cta .button__icon{display:none}.audience__heading{display:none}.advantages__heading{grid-area:advantages-heading}.advantages__cta{grid-area:advantages-cta;margin-left:auto}.advantages__wall{grid-area:advantages-wall;display:flex;flex-wrap:wrap;gap:20px}.page-content{max-width:100vw;overflow:hidden}@media (min-width:768px){.decor-1__wandering-line{display:none}}@media (max-width:1439px){.container{width:1200px}.about{padding-bottom:100px}}@media (max-width:1279px){.container{width:960px}.popup{padding:100px 32px;min-width:500px}.about{background-position:right bottom;background-size:650px auto}}@media (max-width:1023px){.heading--section{font-size:32px;line-height:normal}.container{width:740px}.button{width:unset}.button--purple{color:#fcfcfc;background-color:#996aff}.header__container{justify-content:space-between}.header__nav{margin-right:unset}.header__call{display:none}.decor-1__lighter{width:790px;height:660px;transform:translate(-35%,0)}.decor-4__lighter{display:block}.about{background-position:right;padding:unset}.about__heading{margin-bottom:324px;font-size:22px}.audience__heading{display:block}}@media (max-width:767px){.container{width:345px}.popup{min-width:unset;height:100%;width:100%;padding-left:15px;padding-right:15px}.header__nav{display:none}.about__container{display:flex;flex-direction:column}.about{background-position:center 30%;background-size:600px;margin-bottom:152px}.about__info{margin-bottom:84px;text-align:right;order:1}.about__cta .button__icon{display:flex}.about__cta{order:2}}</style>
+    <link rel="stylesheet" href="/css/main.css" media="print" onload="this.media='all'">
+    <title>Document</title>
+  </head>
+  <body> 
+    <div class="overlay" style="display: none; opacity: 0;">
+      <div class="popup popup--callback" id="callback">
+        <div class="popup__close"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L17.9706 17.9706M18.0001 1.00008L1.0295 17.9706" stroke="#996AFF" stroke-width="2" stroke-linecap="round"/>
+</svg>
+
+        </div>
+        <div class="popup__wrap">
+          <h4 class="popup__heading heading heading--4">Оставьте заявку</h4>
+          <p class="popup__hint text text--16">и мы скоро свяжемся</p>
+          <form class="popup__form" action="" method="post">
+                  <input class="textfield popup__textfield" type="text" placeholder="Введите номер телефона">
+            <button class="popup__submit button button--purple" type="submit">Отправить<span class="button__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></button>
+          </form>
+        </div>
+      </div>
+      <div class="popup popup--message" id="message">
+        <div class="popup__close"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L17.9706 17.9706M18.0001 1.00008L1.0295 17.9706" stroke="#996AFF" stroke-width="2" stroke-linecap="round"/>
+</svg>
+
+        </div>
+        <div class="popup__wrap">
+          <h4 class="popup__heading heading heading--4">Оставьте заявку</h4>
+          <p class="popup__hint text text--16">и мы скоро свяжемся</p>
+          <form class="popup__form" action="" method="post">
+                  <input class="textfield popup__textfield" type="text" placeholder="Введите номер телефона">
+                  <textarea class="textfield textfield--textarea popup__textfield" placeholder="Ваше сообщение"></textarea>
+            <button class="popup__submit button button--purple" type="submit">Отправить<span class="button__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="header__container container"><a class="header__logo" href="#"><svg viewBox="0 0 2852 492" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M518.538 183.618C509.651 183.618 501.271 185.395 493.4 188.95C485.529 192.505 478.673 197.329 472.833 203.423C467.247 209.517 462.804 216.754 459.503 225.133C456.202 233.258 454.551 242.018 454.551 251.413C454.551 260.808 456.202 269.695 459.503 278.074C462.804 286.199 467.247 293.309 472.833 299.402C478.673 305.496 485.529 310.321 493.4 313.875C501.271 317.43 509.651 319.208 518.538 319.208H520.823V183.618H518.538ZM590.141 319.208H592.045C600.932 319.208 609.312 317.43 617.183 313.875C625.054 310.321 631.91 305.496 637.75 299.402C643.59 293.309 648.16 286.199 651.461 278.074C654.762 269.695 656.413 260.808 656.413 251.413C656.413 242.018 654.762 233.258 651.461 225.133C648.16 216.754 643.59 209.517 637.75 203.423C631.91 197.329 625.054 192.505 617.183 188.95C609.312 185.395 600.932 183.618 592.045 183.618H590.141V319.208ZM520.823 390.049C499.24 388.526 479.689 383.956 462.169 376.338C444.649 368.467 429.668 358.437 417.226 346.249C405.038 333.808 395.644 319.589 389.042 303.592C382.44 287.342 379.139 270.075 379.139 251.794C379.139 233.258 382.44 215.865 389.042 199.615C395.644 183.364 405.038 169.145 417.226 156.957C429.668 144.769 444.522 134.867 461.788 127.249C479.308 119.378 498.986 114.554 520.823 112.776V84.9727H590.141V112.776C611.724 114.554 631.275 119.378 648.795 127.249C666.315 134.867 681.169 144.769 693.357 156.957C705.799 169.145 715.32 183.364 721.922 199.615C728.524 215.865 731.825 233.258 731.825 251.794C731.825 269.822 728.397 286.961 721.541 303.211C714.94 319.208 705.418 333.427 692.976 345.869C680.534 358.31 665.553 368.467 648.033 376.338C630.767 383.956 611.47 388.526 590.141 390.049V417.853H520.823V390.049Z" fill="#FCFCFC"/>
+<path d="M853.56 107.825V283.787L991.054 107.825H1065.7V395.001H991.054V219.42L853.56 395.001H778.91V107.825H853.56Z" fill="#FCFCFC"/>
+<path d="M1200.58 218.658H1308.37V107.825H1383.02V395.001H1308.37V276.55H1200.58V395.001H1125.93V107.825H1200.58V218.658Z" fill="#FCFCFC"/>
+<path d="M1508.33 251.413C1508.33 262.839 1510.49 273.376 1514.8 283.025C1519.12 292.674 1524.96 301.053 1532.32 308.162C1539.69 315.272 1548.19 320.858 1557.84 324.921C1567.75 328.729 1578.16 330.634 1589.07 330.634C1599.99 330.634 1610.28 328.729 1619.92 324.921C1629.83 320.858 1638.46 315.272 1645.82 308.162C1653.44 301.053 1659.41 292.674 1663.72 283.025C1668.04 273.376 1670.2 262.839 1670.2 251.413C1670.2 239.987 1668.04 229.449 1663.72 219.801C1659.41 210.152 1653.44 201.773 1645.82 194.663C1638.46 187.554 1629.83 182.094 1619.92 178.286C1610.28 174.223 1599.99 172.192 1589.07 172.192C1578.16 172.192 1567.75 174.223 1557.84 178.286C1548.19 182.094 1539.69 187.554 1532.32 194.663C1524.96 201.773 1519.12 210.152 1514.8 219.801C1510.49 229.449 1508.33 239.987 1508.33 251.413ZM1430.25 251.413C1430.25 230.084 1434.19 210.279 1442.06 191.997C1449.93 173.461 1460.85 157.338 1474.81 143.627C1488.78 129.915 1505.41 119.251 1524.71 111.634C1544.26 103.762 1565.71 99.8266 1589.07 99.8266C1612.18 99.8266 1633.51 103.762 1653.06 111.634C1672.61 119.251 1689.37 129.915 1703.33 143.627C1717.55 157.338 1728.6 173.461 1736.47 191.997C1744.34 210.279 1748.28 230.084 1748.28 251.413C1748.28 272.742 1744.34 292.674 1736.47 311.209C1728.6 329.491 1717.55 345.488 1703.33 359.199C1689.37 372.91 1672.61 383.702 1653.06 391.573C1633.51 399.19 1612.18 402.999 1589.07 402.999C1565.71 402.999 1544.26 399.19 1524.71 391.573C1505.41 383.702 1488.78 372.91 1474.81 359.199C1460.85 345.488 1449.93 329.491 1442.06 311.209C1434.19 292.674 1430.25 272.742 1430.25 251.413Z" fill="#FCFCFC"/>
+<path d="M1795.43 395.001V107.825H1959.59V171.049H1870.08V395.001H1795.43Z" fill="#FCFCFC"/>
+<path d="M2072.42 239.606H2097.18C2124.6 239.606 2138.31 227.672 2138.31 203.804C2138.31 179.936 2124.6 168.002 2097.18 168.002H2072.42V239.606ZM2072.42 395.001H1997.77V107.825H2116.6C2148.85 107.825 2173.48 116.204 2190.49 132.962C2207.75 149.721 2216.39 173.334 2216.39 203.804C2216.39 234.274 2207.75 257.888 2190.49 274.646C2173.48 291.404 2148.85 299.783 2116.6 299.783H2072.42V395.001Z" fill="#FCFCFC"/>
+<path d="M2396.06 288.357L2362.54 192.759L2329.03 288.357H2396.06ZM2415.86 345.107H2309.22L2292.08 395.001H2212.48L2321.79 107.825H2403.3L2512.61 395.001H2433L2415.86 345.107Z" fill="#FCFCFC"/>
+<path d="M2740.27 171.049H2654.19V299.022C2654.19 306.385 2653.93 312.606 2653.43 317.684C2653.17 322.762 2652.41 327.46 2651.14 331.776H2740.27V171.049ZM2556.3 331.776C2565.95 331.776 2572.17 328.983 2574.97 323.397C2578.01 317.557 2579.54 309.178 2579.54 298.26V107.825H2814.92V331.776H2851.1V448.703H2776.83V395.001H2604.29V448.703H2530.02V331.776H2556.3Z" fill="#FCFCFC"/>
+<path d="M132.122 177.352C132.122 164.869 123.359 149.69 112.549 143.449L19.5737 89.77C8.76343 83.5287 6.00117e-06 88.5883 5.72618e-06 101.071L0 360.991C-2.74998e-07 373.474 8.76344 388.652 19.5737 394.894L112.549 448.573C123.359 454.814 132.122 449.755 132.122 437.272L132.122 177.352Z" fill="#996AFF"/>
+<path d="M37.9766 83.234L130.952 136.913C135.999 139.827 140.675 144.904 144.094 150.826C147.514 156.748 149.572 163.337 149.572 169.164L149.572 429.085C149.572 434.925 147.537 438.521 144.792 440.105C142.048 441.689 137.916 441.654 132.859 438.734L39.8836 385.055C34.8366 382.141 30.1601 377.064 26.741 371.142C23.3219 365.22 21.2635 358.631 21.2635 352.804L21.2635 92.8833C21.2635 87.0432 23.2988 83.4473 26.043 81.863C28.7871 80.2787 32.9189 80.314 37.9766 83.234Z" stroke="#9C9C9C" stroke-width="3.81405"/>
+<path d="M265.614 100.785C265.614 88.3028 256.851 73.1241 246.04 66.8828L153.065 13.2036C142.255 6.96228 133.492 12.0219 133.492 24.5045L133.492 131.863C133.492 144.345 142.255 159.524 153.065 165.765L246.04 219.445C256.851 225.686 265.614 220.626 265.614 208.144V100.785Z" fill="#FCFCFC"/>
+<path d="M284.971 92.883C284.971 80.4004 276.208 65.2217 265.397 58.9804L172.422 5.30124C161.612 -0.940065 152.849 4.11952 152.849 16.6021L152.849 123.961C152.849 136.443 161.612 151.622 172.422 157.863L265.397 211.542C276.208 217.784 284.971 212.724 284.971 200.241V92.883Z" stroke="#9C9C9C" stroke-width="3.81405"/>
+<path d="M194.564 423.433C194.564 435.915 203.328 451.094 214.138 457.335L253.285 479.937C264.095 486.178 272.859 481.119 272.859 468.636L272.859 423.433C272.859 410.95 264.095 395.771 253.285 389.53L214.138 366.928C203.328 360.687 194.564 365.746 194.564 378.229L194.564 423.433Z" fill="#FCFCFC"/>
+<path d="M199.822 376.669L238.969 399.27C244.162 402.268 248.927 407.459 252.396 413.468C255.866 419.476 257.978 426.198 257.978 432.194L257.978 477.398C257.978 483.401 255.879 487.319 252.81 489.091C249.741 490.863 245.299 490.722 240.099 487.72L200.952 465.118C195.759 462.12 190.994 456.93 187.525 450.921C184.056 444.912 181.943 438.191 181.943 432.194L181.943 386.991C181.943 380.987 184.042 377.07 187.111 375.298C190.181 373.526 194.623 373.667 199.822 376.669Z" stroke="#9C9C9C" stroke-width="2.26018"/>
+</svg>
+</a>
+        <nav class="header__nav text text--muted text--16"><a class="header__nav-link" href="#advantages">Преимущества</a><a class="header__nav-link" href="#faq">Вопросы</a><a class="header__nav-link" href="#services">Услуги</a></nav><a class="header__call" href="tel:+78008142315">+7 (800) 814-23-15<span class="header__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21 14.5379L14.8511 13.8262L11.9109 16.7665C8.59864 15.0819 5.90643 12.3897 4.22188 9.07745L7.1738 6.12553L6.46207 0H0.0331802C-0.643545 11.8777 9.1223 21.6435 21 20.9668V14.5379Z" fill="currentColor"/>
+</svg>
+</span></a>
+      </div>
+    </header>
+    <main class="page-content">
+      <section class="about" id="about">
+        <div class="about__container container">
+          <p class="about__info text--muted">Центр финансовой поддержки производителей и предпринимателей</p>
+          <h1 class="about__heading heading heading--section">Предоставляем возможности<br>для развития вашего дела:<span class="about__heading-part">
+               банковские гарантии,<br>гранты, субсидии,<br>кредиты, лизинг,<br>инвестиции</span></h1>
+          <button class="about__cta button button--white" type="button" data-js="message_popup_trigger">
+             Обратный звонок<span class="button__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></button>
+        </div>
+      </section>
+      <div class="decor decor-1">
+        <div class="lighter decor-1__lighter"></div>
+        <div class="wandering-line decor-1__wandering-line"><span class="dot dot--purple"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+      </div>
+      <section class="audience container">
+        <h2 class="audience__heading heading heading--section">Для кого</h2>
+        <div class="audience__block">
+          <h3 class="audience__title heading heading--3">Производителям</h3>
+          <ul class="audience__list text text--20 text--muted"> 
+            <li class="audience__item">
+              Финансирование на расширение производства, увеличение оборотных средств, лизинг оборудования и прочие нужды</li>
+            <li class="audience__item">Без залога.</li>
+          </ul>
+        </div>
+        <div class="audience__block">
+          <h3 class="audience__title heading heading--3">Строителям</h3>
+          <ul class="audience__list text text--20 text--muted"> 
+            <li class="audience__item">Контрактное финансирование, банковские гарантии для 44/223 ФЗ, пополнение оборотных средств, лизинг техники</li>
+            <li class="audience__item">Оперативное рассмотрение заявки и предоставление денежных средств</li>
+          </ul>
+        </div>
+        <div class="audience__block">
+          <h3 class="audience__title heading heading--3">Экспортерам<br>/Импортерам</h3>
+          <ul class="audience__list text text--20 text--muted"> 
+            <li class="audience__item">Финансирование экспортных/импортных сделок</li>
+            <li class="audience__item">Получение экспортных льгот</li>
+            <li class="audience__item">Возврат средств затраченных на экспортные поставки</li>
+            <li class="audience__item">Субсидии на организацию экспорта, либо компенсация до 10% суммы экспортного контракта</li>
+          </ul>
+        </div>
+        <div class="audience__block">
+          <h3 class="audience__title heading heading--3">Бизнесу</h3>
+          <ul class="audience__list text text--20 text--muted"> 
+            <li class="audience__item">Привлечение финансирования под ваши актуальные задачи и потребности</li>
+          </ul>
+        </div>
+      </section>
+      <section class="advantages container" id="advantages">
+        <h2 class="advantages__heading heading heading--section">Преимущества</h2>
+        <button class="advantages__cta button button--purple" type="button" data-js="callback_popup_trigger">
+           Обратный звонок<span class="button__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></button>
+        <div class="advantages__wall">
+                <article class="adv-card advantages__card">
+                  <h3 class="heading heading--3 adv-card__title">Профессионально</h3>
+                  <p class="text text--20 text--muted adv-card__text">Анализируем ваши документы по финансовому скорингу</p><img class="adv-card__image" src="/assets/images/adv_1.png">
+                </article>
+                <article class="adv-card advantages__card">
+                  <h3 class="heading heading--3 adv-card__title">Быстро</h3>
+                  <p class="text text--20 text--muted adv-card__text">Формируем персональное предложение</p><img class="adv-card__image" src="/assets/images/adv_2.png">
+                </article>
+                <article class="adv-card advantages__card">
+                  <h3 class="heading heading--3 adv-card__title">Выгодно</h3>
+                  <p class="text text--20 text--muted adv-card__text">Сопровождаем сделку до получения финансирования</p><img class="adv-card__image" src="/assets/images/adv_3.png">
+                </article>
+        </div>
+      </section>
+      <section class="flow container" id="flow">
+        <h2 class="flow__heading heading heading--section">Процесс работы</h2>
+        <div class="flow__wandering-line line"><span class="dot dot--purple"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="flow__content">
+          <div class="flow__line line"></div>
+          <ul class="flow__list">
+            <li class="flow__item">
+              <h3 class="flow__title heading heading--3">Изучаем ваш бизнес вместе с вами</h3><span class="dot flow__marker"></span>
+            </li>
+            <li class="flow__item">
+              <h3 class="flow__title heading heading--3">Предлагаем ряд продуктов для привлечения финансирования</h3><span class="dot flow__marker"></span>
+            </li>
+            <li class="flow__item">
+              <h3 class="flow__title heading heading--3">Согласовываем условия получения/привлечения финансирования</h3><span class="dot flow__marker"></span>
+            </li>
+            <li class="flow__item">
+              <h3 class="flow__title heading heading--3">Заключаем договор и получаем аванс за наши услуги</h3><span class="dot flow__marker"></span>
+            </li>
+            <li class="flow__item">
+              <h3 class="flow__title heading heading--3">Подготавливаем полный пакет документов для получения средств</h3><span class="dot flow__marker"></span>
+            </li>
+            <li class="flow__item">
+              <h3 class="flow__title heading heading--3">Сопровождаем заявку до получения денежных средств на ваш расчетный счет</h3><span class="dot flow__marker"></span>
+            </li>
+            <li class="flow__item">
+              <h3 class="flow__title heading heading--3">Мы с вами остаемся хорошими друзьями и вы рекомендуете нас партнёрам :)</h3><span class="dot flow__marker"></span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="partners">
+        <h2 class="partners__heading heading heading--section container">Партнёры</h2>
+        <div class="partners__wall">
+          <div class="splide partners__slider partners__slider--first" data-js="forward">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="partner-label"><img class="partner-label__image" src="/assets/images/partners/sberbank.png"></div>
+                </li>
+                <li class="splide__slide">
+                  <div class="partner-label"><img class="partner-label__image" src="/assets/images/partners/vtb.png"></div>
+                </li>
+                <li class="splide__slide">
+                  <div class="partner-label"><img class="partner-label__image" src="/assets/images/partners/alpha.png"></div>
+                </li>
+                <li class="splide__slide">
+                  <div class="partner-label"><img class="partner-label__image" src="/assets/images/partners/rosselkhoz.png"></div>
+                </li>
+                <li class="splide__slide">
+                  <div class="partner-label"><img class="partner-label__image" src="/assets/images/partners/sovcom.png"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="splide" data-js="backward">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="partner-label"><img class="partner-label__image" src="/assets/images/partners/tinkoff.svg"></div>
+                </li>
+                <li class="splide__slide">
+                  <div class="partner-label"><img class="partner-label__image" src="/assets/images/partners/akbars.png"></div>
+                </li>
+                <li class="splide__slide">
+                  <div class="partner-label"><img class="partner-label__image" src="/assets/images/partners/uralsib.png"></div>
+                </li>
+                <li class="splide__slide">
+                  <div class="partner-label"><img class="partner-label__image" src="/assets/images/partners/absolut.png"></div>
+                </li>
+                <li class="splide__slide">
+                  <div class="partner-label"><img class="partner-label__image" src="/assets/images/partners/sdm.jpg"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="decor decor-2">
+        <div class="lighter decor-2__lighter"></div>
+      </div>
+      <section class="faq" id="faq">
+        <div class="faq__decoration"><span class="faq__dot dot dot--purple"></span></div>
+        <div class="faq__container container">
+          <div class="faq__inner-wrap">
+            <h2 class="faq__heading heading heading--section">Часто задаваемые<br>вопросы</h2>
+            <div class="faq__content">
+              <ul class="faq__list">
+                <li class="faq__item">
+                  <div class="faq__top">
+                    <h3 class="faq__title heading heading--3" data-js="faq_control">Зачем обращаться именно к вам?</h3>
+                    <div class="faq__icon" data-js="faq_control"><svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28 16.9961H16V28.9961H12V16.9961H0V12.9961H12V0.996094H16V12.9961H28V16.9961Z" fill="#996AFF"/>
+</svg>
+
+                    </div>
+                  </div>
+                  <div class="faq__body">
+                    <p class="faq__text text text--16">Наш опыт и экспертиза позволяют выгодно обыграть сильные стороны вашего бизнеса даже в сложной ситуации, а наши агентские договора с финансовыми учреждениями позволяют получать обратную связь и договариваться на персональные условия для Вашего бизнеса. Рассматривая заявку у нас, вы получите подробную информацию по негативу, который может содержаться в банковской базе относительно вашей организации</p>
+                  </div>
+                </li>
+                <li class="faq__item">
+                  <div class="faq__top">
+                    <h3 class="faq__title heading heading--3" data-js="faq_control">У меня бизнес, который открыт недавно, можно для него что-то получить?</h3>
+                    <div class="faq__icon" data-js="faq_control"><svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28 16.9961H16V28.9961H12V16.9961H0V12.9961H12V0.996094H16V12.9961H28V16.9961Z" fill="#996AFF"/>
+</svg>
+
+                    </div>
+                  </div>
+                  <div class="faq__body">
+                    <p class="faq__text text text--16">Да, есть финансовые продукты созданные специально под начинающий бизнес и мы знаем, как с ними правильно работать</p>
+                  </div>
+                </li>
+                <li class="faq__item">
+                  <div class="faq__top">
+                    <h3 class="faq__title heading heading--3" data-js="faq_control">Какое участие моя компания будет принимать в процессе?</h3>
+                    <div class="faq__icon" data-js="faq_control"><svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28 16.9961H16V28.9961H12V16.9961H0V12.9961H12V0.996094H16V12.9961H28V16.9961Z" fill="#996AFF"/>
+</svg>
+
+                    </div>
+                  </div>
+                  <div class="faq__body">
+                    <p class="faq__text text text--16">Вашей задачей будет только передача нам документов, необходимых для формирования заявки.</p>
+                  </div>
+                </li>
+                <li class="faq__item">
+                  <div class="faq__top">
+                    <h3 class="faq__title heading heading--3" data-js="faq_control">Куда можно потратить деньги?</h3>
+                    <div class="faq__icon" data-js="faq_control"><svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28 16.9961H16V28.9961H12V16.9961H0V12.9961H12V0.996094H16V12.9961H28V16.9961Z" fill="#996AFF"/>
+</svg>
+
+                    </div>
+                  </div>
+                  <div class="faq__body">
+                    <p class="faq__text text text--16">Направления возможных затрат зависят от типа финансового продукта/программы. Мы подберём оптимальное решение для ваших бизнес-целей, чтобы вы могли решить поставленные задачи.</p>
+                  </div>
+                </li>
+                <li class="faq__item">
+                  <div class="faq__top">
+                    <h3 class="faq__title heading heading--3" data-js="faq_control">Как будет происходить взаимодействие?</h3>
+                    <div class="faq__icon" data-js="faq_control"><svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28 16.9961H16V28.9961H12V16.9961H0V12.9961H12V0.996094H16V12.9961H28V16.9961Z" fill="#996AFF"/>
+</svg>
+
+                    </div>
+                  </div>
+                  <div class="faq__body">
+                    <p class="faq__text text text--16">На протяжении всего периода подготовки и подачи заявки мы будем поддерживать с вами связь. Мы подбираем удобное для вас время собраний и не беспокоим беспредметно: только конкретные вопросы и предложения.</p>
+                  </div>
+                </li>
+                <li class="faq__item">
+                  <div class="faq__top">
+                    <h3 class="faq__title heading heading--3" data-js="faq_control">Как я могу убедиться в безопасности конфиденциальной информации и коммерческой?</h3>
+                    <div class="faq__icon" data-js="faq_control"><svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28 16.9961H16V28.9961H12V16.9961H0V12.9961H12V0.996094H16V12.9961H28V16.9961Z" fill="#996AFF"/>
+</svg>
+
+                    </div>
+                  </div>
+                  <div class="faq__body">
+                    <p class="faq__text text text--16">Мы подпишем с вами все необходимые документы, защищающие вашу информацию от разглашения. Все данные запрашиваются только при наличии существенных оснований и в интересах усиления преимуществ вашей заявки.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="rejection container" id="rejection">
+        <h2 class="rejection__heading heading heading--section">
+           Мы не будем с вами<br>
+          работать, если:
+        </h2>
+        <div class="rejection__wall">
+                <div class="rej-card rejection__card"><span class="rej-card__close"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="3" width="41.0121" height="4.24264" transform="rotate(45 3 0)" fill="#FF7878"/>
+<rect y="29" width="41.0121" height="4.24264" transform="rotate(-45 0 29)" fill="#FF7878"/>
+</svg>
+</span>
+                  <div class="rej-card__content">
+                    <h4 class="rej-card__title heading heading--4">Существование вашего юр. лица менее<br>6 месяцев</h4>
+                  </div>
+                </div>
+                <div class="rej-card rejection__card"><span class="rej-card__close"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="3" width="41.0121" height="4.24264" transform="rotate(45 3 0)" fill="#FF7878"/>
+<rect y="29" width="41.0121" height="4.24264" transform="rotate(-45 0 29)" fill="#FF7878"/>
+</svg>
+</span>
+                  <div class="rej-card__content">
+                    <h4 class="rej-card__title heading heading--4">Арбитражные дела</h4>
+                    <p class="rej-card__text text text--20 text--muted">В которых бизнес выступает качестве ответчика, на сумму превышающую сумму прошлогоднего оборота</p>
+                  </div>
+                </div>
+                <div class="rej-card rejection__card"><span class="rej-card__close"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="3" width="41.0121" height="4.24264" transform="rotate(45 3 0)" fill="#FF7878"/>
+<rect y="29" width="41.0121" height="4.24264" transform="rotate(-45 0 29)" fill="#FF7878"/>
+</svg>
+</span>
+                  <div class="rej-card__content">
+                    <h4 class="rej-card__title heading heading--4">Отметка<br>о недостоверности</h4>
+                    <p class="rej-card__text text text--20 text--muted">О директоре, учредителе или юридическом адресе</p>
+                  </div>
+                </div>
+                <div class="rejection__card--double-span rej-card rejection__card"><span class="rej-card__close"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="3" width="41.0121" height="4.24264" transform="rotate(45 3 0)" fill="#FF7878"/>
+<rect y="29" width="41.0121" height="4.24264" transform="rotate(-45 0 29)" fill="#FF7878"/>
+</svg>
+</span>
+                  <div class="rej-card__content">
+                    <h4 class="rej-card__title heading heading--4">Судебные исполнительные листы</h4>
+                  </div>
+                </div>
+                <div class="rej-card rejection__card"><span class="rej-card__close"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="3" width="41.0121" height="4.24264" transform="rotate(45 3 0)" fill="#FF7878"/>
+<rect y="29" width="41.0121" height="4.24264" transform="rotate(-45 0 29)" fill="#FF7878"/>
+</svg>
+</span>
+                  <div class="rej-card__content">
+                    <h4 class="rej-card__title heading heading--4">Задолженность<br>перед ФНС</h4>
+                  </div>
+                </div>
+        </div>
+      </section>
+      <div class="decor decor-3">
+        <div class="lighter decor-3__lighter"></div>
+      </div>
+      <div class="decor decor-4">
+        <div class="lighter decor-4__lighter"></div>
+      </div>
+      <section class="services" id="services">
+        <div class="services__container container">
+          <div class="services__top">
+            <h2 class="services__heading heading heading--section">Наши услуги:</h2>
+            <h3 class="services__hint heading heading--3 text--muted">неполный перечень финансовых продуктов*</h3>
+          </div>
+          <div class="services__content">
+            <ul class="services__list services__list--visible">
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Кредит под оборотные средства</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Гранты на расширение производства</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Лизинг на покупку оборудования</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Лизинг на покупку строительной техники</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Коммерческая ипотека</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Проектное финансирование</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Кредит на исполнение контрактов 223/344 ФЗ</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Кредит на исполнение коммерческих контрактов</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+            </ul>
+            <ul class="services__list services__list--expandable">
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Субсидированный кредит на виды бизнеса, подходящие под господдержку</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Инвестиции на развитие бизнеса с нуля</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Инвестиции на развитие производства</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Инвестиции на создание инновационного продукта</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Инвестиции на создание IT продутка или прочих интеллектуальных ценностей</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Банковские гарантии 223/344 ФЗ</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Банковские гарантии для коммерческих контрактов</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Кредиты, кредитные линии, проектное финансирование, тендерное финансирование</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Банковские гарантии для участия и получения авансов по 44-223 фз или коммерция</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Помощь в открытии банковских счетов</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Консалтинг по построению корректной работы в рамках актуальной банковской дисциплины, исходя из задач клиента</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Подбор надежных и эффективных депозитов</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Факторинг, лизинг, коммерческая ипотека</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+              <li class="services__item"><a href="#">
+                  <h4 class="services__title heading heading--4">Банковское сопровождение</h4></a><span class="services__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+</span></li>
+            </ul>
+          </div>
+          <div class="services__bottom">
+            <button class="services__button button button--white" type="button" data-js="services_expander">Смотреть полный список услуг<span class="button__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.5 1.5C13.5 0.671573 12.8284 0 12 0C11.1716 0 10.5 0.671573 10.5 1.5H13.5ZM10.9393 23.5607C11.5251 24.1464 12.4749 24.1464 13.0607 23.5607L22.6066 14.0147C23.1924 13.4289 23.1924 12.4792 22.6066 11.8934C22.0208 11.3076 21.0711 11.3076 20.4853 11.8934L12 20.3787L3.51472 11.8934C2.92893 11.3076 1.97919 11.3076 1.3934 11.8934C0.807611 12.4792 0.807611 13.4289 1.3934 14.0147L10.9393 23.5607ZM10.5 1.5L10.5 22.5H13.5L13.5 1.5H10.5Z" fill="#FCFCFC"/>
+</svg>
+</span></button>
+          </div>
+        </div>
+      </section>
+      <section class="contact container" id="contact">
+        <div class="contact__content">
+          <h2 class="contact__heading heading heading--section">Связаться</h2>
+          <p class="contact__text text text--20 text--muted">В нашей команде только опытные специалисты с высоким уровнем подготовки, которые помогут учесть самые сложные экономические, юридические и бухгалтерские нюансы, и смогут решить вашу задачу максимально эффективным для вас способом.</p>
+        </div>
+        <button class="contact__cta button button--purple" type="button" data-js="callback_popup_trigger">Обратный звонок
+          <div class="button__icon"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.4706 2.02944C20.4706 1.20101 19.799 0.529438 18.9706 0.529438L5.47056 0.529437C4.64214 0.529437 3.97056 1.20101 3.97056 2.02944C3.97056 2.85787 4.64214 3.52944 5.47056 3.52944H17.4706V15.5294C17.4706 16.3579 18.1421 17.0294 18.9706 17.0294C19.799 17.0294 20.4706 16.3579 20.4706 15.5294L20.4706 2.02944ZM3.06066 20.0607L20.0312 3.0901L17.9099 0.968777L0.93934 17.9393L3.06066 20.0607Z" fill="currentColor"/>
+</svg>
+
+          </div>
+        </button>
+      </section>
+      <div class="decor decor-5">
+        <div class="lighter decor-5__lighter"></div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer__top">
+        <aside class="footer__aside"><a class="footer__logo" href="#"><svg viewBox="0 0 2852 492" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M518.538 183.618C509.651 183.618 501.271 185.395 493.4 188.95C485.529 192.505 478.673 197.329 472.833 203.423C467.247 209.517 462.804 216.754 459.503 225.133C456.202 233.258 454.551 242.018 454.551 251.413C454.551 260.808 456.202 269.695 459.503 278.074C462.804 286.199 467.247 293.309 472.833 299.402C478.673 305.496 485.529 310.321 493.4 313.875C501.271 317.43 509.651 319.208 518.538 319.208H520.823V183.618H518.538ZM590.141 319.208H592.045C600.932 319.208 609.312 317.43 617.183 313.875C625.054 310.321 631.91 305.496 637.75 299.402C643.59 293.309 648.16 286.199 651.461 278.074C654.762 269.695 656.413 260.808 656.413 251.413C656.413 242.018 654.762 233.258 651.461 225.133C648.16 216.754 643.59 209.517 637.75 203.423C631.91 197.329 625.054 192.505 617.183 188.95C609.312 185.395 600.932 183.618 592.045 183.618H590.141V319.208ZM520.823 390.049C499.24 388.526 479.689 383.956 462.169 376.338C444.649 368.467 429.668 358.437 417.226 346.249C405.038 333.808 395.644 319.589 389.042 303.592C382.44 287.342 379.139 270.075 379.139 251.794C379.139 233.258 382.44 215.865 389.042 199.615C395.644 183.364 405.038 169.145 417.226 156.957C429.668 144.769 444.522 134.867 461.788 127.249C479.308 119.378 498.986 114.554 520.823 112.776V84.9727H590.141V112.776C611.724 114.554 631.275 119.378 648.795 127.249C666.315 134.867 681.169 144.769 693.357 156.957C705.799 169.145 715.32 183.364 721.922 199.615C728.524 215.865 731.825 233.258 731.825 251.794C731.825 269.822 728.397 286.961 721.541 303.211C714.94 319.208 705.418 333.427 692.976 345.869C680.534 358.31 665.553 368.467 648.033 376.338C630.767 383.956 611.47 388.526 590.141 390.049V417.853H520.823V390.049Z" fill="#FCFCFC"/>
+<path d="M853.56 107.825V283.787L991.054 107.825H1065.7V395.001H991.054V219.42L853.56 395.001H778.91V107.825H853.56Z" fill="#FCFCFC"/>
+<path d="M1200.58 218.658H1308.37V107.825H1383.02V395.001H1308.37V276.55H1200.58V395.001H1125.93V107.825H1200.58V218.658Z" fill="#FCFCFC"/>
+<path d="M1508.33 251.413C1508.33 262.839 1510.49 273.376 1514.8 283.025C1519.12 292.674 1524.96 301.053 1532.32 308.162C1539.69 315.272 1548.19 320.858 1557.84 324.921C1567.75 328.729 1578.16 330.634 1589.07 330.634C1599.99 330.634 1610.28 328.729 1619.92 324.921C1629.83 320.858 1638.46 315.272 1645.82 308.162C1653.44 301.053 1659.41 292.674 1663.72 283.025C1668.04 273.376 1670.2 262.839 1670.2 251.413C1670.2 239.987 1668.04 229.449 1663.72 219.801C1659.41 210.152 1653.44 201.773 1645.82 194.663C1638.46 187.554 1629.83 182.094 1619.92 178.286C1610.28 174.223 1599.99 172.192 1589.07 172.192C1578.16 172.192 1567.75 174.223 1557.84 178.286C1548.19 182.094 1539.69 187.554 1532.32 194.663C1524.96 201.773 1519.12 210.152 1514.8 219.801C1510.49 229.449 1508.33 239.987 1508.33 251.413ZM1430.25 251.413C1430.25 230.084 1434.19 210.279 1442.06 191.997C1449.93 173.461 1460.85 157.338 1474.81 143.627C1488.78 129.915 1505.41 119.251 1524.71 111.634C1544.26 103.762 1565.71 99.8266 1589.07 99.8266C1612.18 99.8266 1633.51 103.762 1653.06 111.634C1672.61 119.251 1689.37 129.915 1703.33 143.627C1717.55 157.338 1728.6 173.461 1736.47 191.997C1744.34 210.279 1748.28 230.084 1748.28 251.413C1748.28 272.742 1744.34 292.674 1736.47 311.209C1728.6 329.491 1717.55 345.488 1703.33 359.199C1689.37 372.91 1672.61 383.702 1653.06 391.573C1633.51 399.19 1612.18 402.999 1589.07 402.999C1565.71 402.999 1544.26 399.19 1524.71 391.573C1505.41 383.702 1488.78 372.91 1474.81 359.199C1460.85 345.488 1449.93 329.491 1442.06 311.209C1434.19 292.674 1430.25 272.742 1430.25 251.413Z" fill="#FCFCFC"/>
+<path d="M1795.43 395.001V107.825H1959.59V171.049H1870.08V395.001H1795.43Z" fill="#FCFCFC"/>
+<path d="M2072.42 239.606H2097.18C2124.6 239.606 2138.31 227.672 2138.31 203.804C2138.31 179.936 2124.6 168.002 2097.18 168.002H2072.42V239.606ZM2072.42 395.001H1997.77V107.825H2116.6C2148.85 107.825 2173.48 116.204 2190.49 132.962C2207.75 149.721 2216.39 173.334 2216.39 203.804C2216.39 234.274 2207.75 257.888 2190.49 274.646C2173.48 291.404 2148.85 299.783 2116.6 299.783H2072.42V395.001Z" fill="#FCFCFC"/>
+<path d="M2396.06 288.357L2362.54 192.759L2329.03 288.357H2396.06ZM2415.86 345.107H2309.22L2292.08 395.001H2212.48L2321.79 107.825H2403.3L2512.61 395.001H2433L2415.86 345.107Z" fill="#FCFCFC"/>
+<path d="M2740.27 171.049H2654.19V299.022C2654.19 306.385 2653.93 312.606 2653.43 317.684C2653.17 322.762 2652.41 327.46 2651.14 331.776H2740.27V171.049ZM2556.3 331.776C2565.95 331.776 2572.17 328.983 2574.97 323.397C2578.01 317.557 2579.54 309.178 2579.54 298.26V107.825H2814.92V331.776H2851.1V448.703H2776.83V395.001H2604.29V448.703H2530.02V331.776H2556.3Z" fill="#FCFCFC"/>
+<path d="M132.122 177.352C132.122 164.869 123.359 149.69 112.549 143.449L19.5737 89.77C8.76343 83.5287 6.00117e-06 88.5883 5.72618e-06 101.071L0 360.991C-2.74998e-07 373.474 8.76344 388.652 19.5737 394.894L112.549 448.573C123.359 454.814 132.122 449.755 132.122 437.272L132.122 177.352Z" fill="#996AFF"/>
+<path d="M37.9766 83.234L130.952 136.913C135.999 139.827 140.675 144.904 144.094 150.826C147.514 156.748 149.572 163.337 149.572 169.164L149.572 429.085C149.572 434.925 147.537 438.521 144.792 440.105C142.048 441.689 137.916 441.654 132.859 438.734L39.8836 385.055C34.8366 382.141 30.1601 377.064 26.741 371.142C23.3219 365.22 21.2635 358.631 21.2635 352.804L21.2635 92.8833C21.2635 87.0432 23.2988 83.4473 26.043 81.863C28.7871 80.2787 32.9189 80.314 37.9766 83.234Z" stroke="#9C9C9C" stroke-width="3.81405"/>
+<path d="M265.614 100.785C265.614 88.3028 256.851 73.1241 246.04 66.8828L153.065 13.2036C142.255 6.96228 133.492 12.0219 133.492 24.5045L133.492 131.863C133.492 144.345 142.255 159.524 153.065 165.765L246.04 219.445C256.851 225.686 265.614 220.626 265.614 208.144V100.785Z" fill="#FCFCFC"/>
+<path d="M284.971 92.883C284.971 80.4004 276.208 65.2217 265.397 58.9804L172.422 5.30124C161.612 -0.940065 152.849 4.11952 152.849 16.6021L152.849 123.961C152.849 136.443 161.612 151.622 172.422 157.863L265.397 211.542C276.208 217.784 284.971 212.724 284.971 200.241V92.883Z" stroke="#9C9C9C" stroke-width="3.81405"/>
+<path d="M194.564 423.433C194.564 435.915 203.328 451.094 214.138 457.335L253.285 479.937C264.095 486.178 272.859 481.119 272.859 468.636L272.859 423.433C272.859 410.95 264.095 395.771 253.285 389.53L214.138 366.928C203.328 360.687 194.564 365.746 194.564 378.229L194.564 423.433Z" fill="#FCFCFC"/>
+<path d="M199.822 376.669L238.969 399.27C244.162 402.268 248.927 407.459 252.396 413.468C255.866 419.476 257.978 426.198 257.978 432.194L257.978 477.398C257.978 483.401 255.879 487.319 252.81 489.091C249.741 490.863 245.299 490.722 240.099 487.72L200.952 465.118C195.759 462.12 190.994 456.93 187.525 450.921C184.056 444.912 181.943 438.191 181.943 432.194L181.943 386.991C181.943 380.987 184.042 377.07 187.111 375.298C190.181 373.526 194.623 373.667 199.822 376.669Z" stroke="#9C9C9C" stroke-width="2.26018"/>
+</svg>
+</a>
+          <div class="footer__messengers"><a class="square-button" href="#"><svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.59964 8.71719C7.54764 6.11208 11.513 4.39447 13.4956 3.56466C19.1631 1.19513 20.3393 0.783595 21.1075 0.769653C21.2765 0.766928 21.6526 0.808915 21.8981 1.00843C22.1021 1.1767 22.1594 1.40426 22.1881 1.56404C22.2136 1.72365 22.2487 2.08743 22.22 2.3714C21.914 5.61497 20.5848 13.4861 19.909 17.1191C19.6253 18.6562 19.0611 19.1716 18.5161 19.2219C17.3303 19.3315 16.4314 18.4347 15.2839 17.6787C13.4893 16.495 12.4756 15.7585 10.732 14.6037C8.71748 13.2691 10.0244 12.5354 11.1719 11.3367C11.4715 11.0229 16.6928 6.24894 16.7916 5.81593C16.8043 5.76176 16.8171 5.55984 16.696 5.45343C16.578 5.3467 16.4027 5.38324 16.2752 5.41209C16.0935 5.45311 13.2279 7.35951 7.66877 11.131C6.85594 11.6931 6.11961 11.9672 5.4566 11.9527C4.72983 11.937 3.32731 11.5386 2.28497 11.1983C1.00994 10.7806 -0.00688913 10.5598 0.0823627 9.85052C0.126989 9.48129 0.633812 9.10341 1.59964 8.71719Z" fill="#FCFCFC"/>
+</svg>
+</a><a class="square-button" href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.8485 4.14629C18.8279 3.12049 17.6122 2.30716 16.2723 1.75374C14.9324 1.20032 13.4953 0.917889 12.0445 0.922918C5.96616 0.922918 1.01216 5.85213 1.01216 11.9001C1.01216 13.8386 1.52426 15.7216 2.48166 17.3832L0.923096 23.0767L6.7677 21.5481C8.38193 22.4232 10.1965 22.8884 12.0445 22.8884C18.1229 22.8884 23.0769 17.9592 23.0769 11.9112C23.0769 8.97582 21.9303 6.21767 19.8485 4.14629ZM12.0445 21.0275C10.3969 21.0275 8.7827 20.5844 7.36886 19.7536L7.03488 19.5542L3.56152 20.4626L4.48552 17.0952L4.26287 16.7518C3.34749 15.2974 2.86143 13.6162 2.86017 11.9001C2.86017 6.87121 6.97922 2.77276 12.0334 2.77276C14.4826 2.77276 16.787 3.72537 18.5126 5.45337C19.367 6.2996 20.0441 7.30616 20.5046 8.41469C20.9652 9.52322 21.2 10.7117 21.1955 11.9112C21.2178 16.9401 17.0987 21.0275 12.0445 21.0275ZM17.0765 14.2041C16.7982 14.0712 15.44 13.4066 15.1951 13.3069C14.939 13.2183 14.7609 13.174 14.5716 13.4398C14.3824 13.7167 13.8592 14.337 13.7033 14.5143C13.5474 14.7026 13.3805 14.7247 13.1021 14.5807C12.8238 14.4478 11.9332 14.1487 10.8868 13.2183C10.0629 12.4872 9.51745 11.59 9.35046 11.313C9.19461 11.0361 9.3282 10.8921 9.47292 10.7481C9.59538 10.6263 9.75124 10.4269 9.88483 10.2718C10.0184 10.1167 10.0741 9.99489 10.1631 9.81766C10.2522 9.62935 10.2077 9.47428 10.1409 9.34136C10.0741 9.20843 9.51745 7.85705 9.2948 7.30321C9.07215 6.77152 8.83836 6.83798 8.67138 6.8269H8.13701C7.94776 6.8269 7.65831 6.89336 7.40226 7.17028C7.15734 7.44721 6.44486 8.11182 6.44486 9.4632C6.44486 10.8146 7.43566 12.1217 7.56925 12.2989C7.70284 12.4872 9.51745 15.2564 12.2783 16.4416C12.9352 16.7296 13.4473 16.8958 13.848 17.0176C14.5048 17.2281 15.106 17.1949 15.5847 17.1284C16.1191 17.0509 17.2212 16.4638 17.4439 15.8213C17.6776 15.1789 17.6776 14.6361 17.5997 14.5143C17.5218 14.3924 17.3548 14.337 17.0765 14.2041Z" fill="#FCFCFC"/>
+</svg>
+</a><a class="square-button" href="mailto:#"><svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.33333 7.04426L11.3333 11.0003C11.8063 11.3748 12.3941 11.5789 13 11.5789C13.6059 11.5789 14.1937 11.3748 14.6667 11.0003L19.6667 7.04426M25 17.5937V4.40689C25 3.70742 24.719 3.0366 24.219 2.542C23.7189 2.0474 23.0406 1.76953 22.3333 1.76953H3.66667C2.95942 1.76953 2.28115 2.0474 1.78105 2.542C1.28095 3.0366 1 3.70742 1 4.40689V17.5937C1 18.2932 1.28095 18.964 1.78105 19.4586C2.28115 19.9532 2.95942 20.2311 3.66667 20.2311H22.3333C23.0406 20.2311 23.7189 19.9532 24.219 19.4586C24.719 18.964 25 18.2932 25 17.5937Z" stroke="#FCFCFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</a></div>
+        </aside>
+        <div class="footer__menues">
+          <nav class="footer__menu footer-menu">
+            <h6 class="footer-menu__title text text--16">О компании</h6>
+            <ul class="footer-menu__list text text--14">
+              <li class="footer-menu__item"> <a href="#about">О нас</a></li>
+              <li class="footer-menu__item"> <a href="#flow">Этапы работы</a></li>
+              <li class="footer-menu__item"> <a href="#services">Услуги</a></li>
+            </ul>
+          </nav>
+          <nav class="footer__menu footer-menu">
+            <h6 class="footer-menu__title text text--16">Дополнительная информация</h6>
+            <ul class="footer-menu__list text text--14">
+              <li class="footer-menu__item"> <a href="#">Партнёры</a></li>
+              <li class="footer-menu__item"> <a href="#">Частые вопросы</a></li>
+            </ul>
+          </nav>
+          <div class="footer__menu footer-menu">
+            <h6 class="footer-menu__title text text--16">Связаться</h6>
+            <ul class="footer-menu__list text text--14">
+              <li class="footer-menu__item"><a href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+              <li class="footer-menu__item"><a href="mailto:info@mail.ru">info@mail.ru</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container footer__bottom"><a class="footer__policy text text--14" href="#">Политика конфиденциальности</a><a class="footer__agreement text text--14" href="#">Соглашение на обработку персональных данных</a>
+        <p class="footer__copyright text text--14 text--muted"><span>Все права защищены</span><span>Финоград 2023</span></p>
+      </div>
+    </footer>
+    <script src="/js/index.js"></script>
+    <noscript><link rel="stylesheet" href="/css/main.css"></noscript>
+  </body>
+</html>
