@@ -9,7 +9,7 @@ export default function images(done) {
     .pipe(imagemin([
       gifsicle({ interlaced: true }),
       mozjpeg({ quality: 75, progressive: true }),
-      optipng({ optimizationLevel: 5 })
+      optipng({ optimizationLevel: 10 })
     ]))
     .pipe(dest(GLOBS.IMAGES.DEST))
 
